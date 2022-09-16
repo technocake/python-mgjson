@@ -92,7 +92,7 @@ class StaticMGJsonData:
         """
         data_type = type(value)
         if data_type not in ALLOWED_STATIC_DATATYPES:
-            raise(f"Unsupported datatype, must be one of {ALLOWED_STATIC_DATATYPES}")  # noqa
+            raise ValueError(f"Unsupported datatype, must be one of {ALLOWED_STATIC_DATATYPES}")  # noqa
 
         if display_name is None:
             display_name = name.capitalize()
