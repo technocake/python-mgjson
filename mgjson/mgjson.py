@@ -262,7 +262,7 @@ def timestamp(seconds):
     """Relative time point to unix time (from 1970-1-1)."""
     delta = datetime.timedelta(seconds=seconds)
     dt = datetime.datetime(1970, 1, 1) + delta
-    return dt.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3]+'Z'
+    return dt.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'
 
 
 def encode_number(number):
@@ -270,7 +270,6 @@ def encode_number(number):
 
     mgjson expects a string encoded number prefixed with +/-
     """
-    number = number
     return f"{number:+020.15f}"
 
 

@@ -1,0 +1,1 @@
+from .mgjson import MgJSON
